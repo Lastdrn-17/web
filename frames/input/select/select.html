@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Анкета</h1>
+
+    <form method="post">
+        <p>
+            <label>Ваше имя</label>
+            <input type="text" required name="username">
+        </p>
+
+        <table>
+            <tbody>
+                <tr>
+                    <td>Ваш пол</td>
+                    <td>
+                        <input type="radio" name="pol" value="female"> женский
+                        <br><input type="radio" name="pol" value="male"> мужской
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>На каком курсе вы учитесь?</h3>
+
+        <p>
+            <select id="phone" name="phone">
+                <option value="первый">первый</option>
+                <option value="второй">второй</option>
+                <option value="третий">третий</option>
+                <option value="четвертый">четвертый</option>
+            </select>
+        </p>
+
+        <h3>Какие языки программирования вы знаете?</h3>
+
+        <p>
+            <input type="checkbox">Паскаль
+            <br><input type="checkbox">СИ
+            <br><input type="checkbox">Ассамблер
+        </p>
+
+
+        <h3>Напишите несколько слов о себе</h3>
+
+        <p>
+            <textarea name="comment" id="comment" maxlength="200" cols="48" rows="9"></textarea> 
+        </p>
+
+        <p>
+            <button type="submit">Отправка данных</button>
+            <button type="submit">Сброс значения полей</button>
+        </p>
+    </form>
+</body>
+</html>
