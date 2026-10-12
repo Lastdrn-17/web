@@ -5,56 +5,100 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-body {
+body
+ {
     background-color: rgba(162, 233, 206, 0.849);
 }
 
-a {
+a 
+{
     text-decoration: none;
 }
 
-ul {
+ul 
+{
     list-style: none;
 }
+header { 
+  position: sticky; 
+  top: 0; 
+  z-index: 2; 
+  display: flex; 
+  align-items: center; 
+  gap: 30px; 
+  height: 70px; 
+  padding: 0 40px; 
+  background-color: white; 
+  border-bottom: 1px solid #f0f0f0; 
+} 
 
-header {
-    position: sticky;
-    top: 0;
-    z-index: 20;
-    display: flex;
-    align-items: center;
-    gap: 30px;
-    height: 70px;
-    padding: 0 40px;
-    background-color: white;
-    border-bottom: 1px solid #f0f0f0;
+header img { 
+  display: block; 
+  height: 38px; 
+} 
+
+header .nav-list { 
+  display: flex; 
+  justify-content: flex-end; 
+  list-style: none;
+  margin: 0;
+  padding: 0;
+} 
+
+header nav { 
+  flex: 1; 
+} 
+
+header a { 
+  text-decoration: none;
+  font-size: 17px; 
+  font-weight: 400; 
+  color: #4d4c4c; 
+} 
+
+header a:hover { 
+  color: black; 
+} 
+
+.nav-item {
+  position: static; 
 }
 
-header img {
-    display: block;
-    height: 38px;
+.dropdown { 
+  position: absolute; 
+  width: 100%; 
+  display: none; 
+  list-style: none; 
+  top: 70px; 
+  left: 0; 
+  margin: 0; 
+  padding: 20px 40px; 
+  background-color: #757474;
+  z-index: 99; 
+} 
+
+.dropdown li { 
+  text-align: left; 
+} 
+
+.dropdown li a { 
+  display: inline-block; 
+  color: white;
+  padding: 10px 20px;
+} 
+
+.dropdown li a:hover { 
+  color: black;
+} 
+
+.nav-item:hover .dropdown {
+  display: flex;
+  gap: 20px;
 }
 
-header ul {
-    display: flex;
-    justify-content: space-between;
-}
 
-header nav{
-    flex:1;
-}
-
-header a {
-    font-size: 17px;
-    font-weight: 400;
-    color: #4d4c4c;
-}
-
-header a:hover {
-    color: black;
-}
-
-.side-nav {
+.side-nav 
+{
     position: fixed;
     top: 70px;
     bottom: 0;
@@ -65,14 +109,16 @@ header a:hover {
     border-right: 1px solid #e0e0e0;
     box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
     transition: width 0.25s;
-    z-index: 10;
+    z-index: 1;
 }
 
-.side-nav:hover {
+.side-nav:hover 
+{
     width: 260px;
 }
 
-.side-nav a {
+.side-nav a 
+{
     display: flex;
     align-items: center;
     gap: 20px;
@@ -84,22 +130,26 @@ header a:hover {
     white-space: nowrap;
 }
 
-.side-nav a:hover {
+.side-nav a:hover 
+{
     background-color: #f3f3f3;
 }
 
-.side-nav img {
+.side-nav img 
+{
     width: 60px;
     height: 60px;
     flex-shrink: 0;
 }
 
-main {
+main 
+{
     padding: 40px 10px 40px 120px;
     min-height: calc(100vh - 70px);
 }
 
-.pay-form {
+.pay-form 
+{
     max-width: 400px;
     margin: 0 auto;
     padding: 30px;
@@ -109,7 +159,8 @@ main {
     box-shadow: 0 8px 18px rgba(0, 0, 0, 0.185);
 }
 
-label {
+label 
+{
     display: block;
     margin-bottom: 8px;
     font-size: 13px;
@@ -118,7 +169,8 @@ label {
     text-transform: uppercase;
 }
 
-input {
+input 
+{
     width: 100%;
     margin-bottom: 15px;
     padding: 10px 12px;
@@ -127,12 +179,14 @@ input {
     font-size: 16px;
 }
 
-input:focus {
+input:focus 
+{
     outline: none;
     border-color: #2ecc71;
 }
 
-button {
+button 
+{
     width: 100%;
     padding: 12px;
     background-color: #2ecc71;
@@ -144,7 +198,9 @@ button {
     cursor: pointer;
 }
 
-button:hover {
+button:hover 
+{
     background-color: #27ae60;
 }
+
 
