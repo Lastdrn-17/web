@@ -12,7 +12,7 @@ header
   left: 0;
   right: 0;
   height: 70px;
-  background: rgb(245, 245, 245);
+  background: rgb(248, 246, 246);
   z-index: 100;
   padding-left:20px;
   display: flex;
@@ -58,7 +58,6 @@ header
 {
   display: flex;
   height: 70px;
-  justify-content: space-between;
 }
 
 .menu-link
@@ -69,7 +68,7 @@ header
   box-sizing: border-box;
   text-transform: uppercase;
   padding: 16px 20px;
-  color: #555;
+  color: rgb(85, 85, 85);
   text-decoration: none;
 }
 
@@ -89,7 +88,7 @@ header
   position: absolute;
   top: 100%;
   left: 0;
-  min-width: 220px;
+  min-width: 155px;
   background: rgb(255, 255, 255);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
@@ -98,18 +97,30 @@ header
 {
   display: block;
   padding: 16px 20px;
-  color: #555;
+  color: rgb(85, 85, 85);
   text-decoration: none;
 }
 
 .dropdown a:hover
 {
-  background: #eaf3fb;
+  background: rgb(239, 246, 252);
 }
 
 .has-dropdown:hover .dropdown
 {
   display: block;
+}
+
+.icons
+{
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.icons img
+{
+  height: 28px;
 }
 
 .side-nav
@@ -136,7 +147,6 @@ header
 {
   display: flex;
   align-items: center;
-  gap: 20px;
   min-height: 80px;
   padding-left: 18px;
   color: #333;
@@ -158,21 +168,21 @@ main
   flex-direction: column;
   align-items: center;
   text-align: center;
-  background: rgb(246, 246, 246);
+  background: rgb(241, 241, 241);
 }
 
 .hero
 {
   width: 100%;
   max-width: 800px;
-  margin-bottom: 30px;
+  margin-bottom: 17px;
 }
 
 .hero h1
 {
   font-size: 40px;
   font-weight: 700;
-  color: #312e2b;
+  color: rgb(49, 46, 43);
   margin-bottom: 10px;
 }
 
@@ -185,7 +195,7 @@ main
 .my-carousel
 {
   width: 100%;
-  max-width: 500px;
+  max-width: 530px;
 }
 
 .my-carousel .carousel-item img
@@ -211,8 +221,8 @@ main
 
 .about h2
 {
-  color: #312e2b;
-  border-bottom: 3px solid #3692e7;
+  color: rgb(49, 46, 43);
+  border-bottom: 3px solid rgb(54, 146, 231);
   display: inline-block;
   padding-bottom: 6px;
   margin-bottom: 20px;
