@@ -1,82 +1,60 @@
-body
-{
+body {
     padding: 20px 0 0 20px;
 }
 
-.container
-{
-    height: 335px;
-    width: 190px;
+.container {
+    width: 100%;
+    max-width: 260px;
     padding: 15px 12px;
-    font-size: 40px;
     color: white;
     background-color: black;
-    border-radius: 5%;
+    border-radius: 20px;
 }
 
-.result
-{
-    padding: 25px 10px 5px;
-    float: right;
+.result {
+    padding: 20px 10px 10px;
+    font-size: 40px;
+    text-align: right;
 }
 
-.box
-{
+.box,
+.stroch {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
-    height: 210px;
-    width: 190px;
 }
 
-.grey
-{
-    background-color: rgb(92, 90, 90);
-}
-
-.lightgray
-{
-        display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    border: 0;
-    font-size: 19px;
-    color: black;
-    background-color: rgb(158, 156, 156);
-}
-
-.orange
-{
-    background-color: rgb(235, 153, 1);
-}
-
-.x
-{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    border: 0;
-    font-size: 19px;
-    color: white;
-}
-
-.stroch
-{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
+.stroch {
     margin-top: 10px;
 }
 
-.null
-{
-    color: white;
+button {
+    aspect-ratio: 1;
     border: 0;
+    border-radius: 50%;
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+}
+
+.grey {
     background-color: rgb(92, 90, 90);
-    width: 80px;
-    height: 40px;
-    width: 90px;
-    border-radius: 40% 30%;
+}
+
+.lightgray {
+    background-color: rgb(158, 156, 156);
+    color: black;
+}
+
+.orange {
+    background-color: rgb(235, 153, 1);
+}
+
+.null {
+    grid-column: span 2;
+    aspect-ratio: auto;
+    border-radius: 100px;
+    text-align: left;
+    padding-left: 15px;
 }
