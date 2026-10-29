@@ -1,8 +1,10 @@
-body {
+body
+{
     padding: 20px 0 0 20px;
 }
 
-.container {
+.container
+{
     width: 100%;
     max-width: 260px;
     padding: 15px 12px;
@@ -11,47 +13,60 @@ body {
     border-radius: 20px;
 }
 
-.result {
+.result
+{
     padding: 20px 10px 10px;
-    font-size: 40px;
+    font-size: 45px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: right;
 }
 
 .box,
-.stroch {
+.stroch
+{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
 }
 
-.stroch {
+.stroch
+{
     margin-top: 10px;
 }
 
-button {
+button
+{
     aspect-ratio: 1;
     border: 0;
     border-radius: 50%;
     font-size: 25px;
-    font-weight: bold;
     color: white;
     cursor: pointer;
 }
 
-.grey {
+button:active
+{
+    filter: brightness(1.3);
+}
+
+.grey
+{
     background-color: rgb(92, 90, 90);
 }
 
-.lightgray {
+.lightgray
+{
     background-color: rgb(158, 156, 156);
     color: black;
 }
 
-.orange {
+.orange
+{
     background-color: rgb(235, 153, 1);
 }
 
-.null {
+.null
+{
     grid-column: span 2;
     aspect-ratio: auto;
     border-radius: 100px;
