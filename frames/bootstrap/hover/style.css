@@ -1,10 +1,15 @@
+body
+{
+    padding: 20px;
+}
+
 .container
 {
     position: relative;
     width: 330px;
     padding: 10px 15px;
     border-radius: 20px;
-    background: #fff;
+    background: rgb(255, 255, 255);
     box-shadow: 0 0 6px rgba(0, 0, 0, 0.12);
     transition: box-shadow 0.3s;
 }
@@ -37,14 +42,14 @@
     width: 16px;
     height: 16px;
     fill: none;
-    stroke: #9aa0a6;
+    stroke: rgb(154, 160, 166);
     stroke-width: 2;
     transition: stroke 0.2s;
 }
 
 .like:hover
 {
-    background: #eaf6dc;
+    background: rgb(234, 246, 220);
     border-color: rgb(94, 172, 16);
 }
 
@@ -58,15 +63,14 @@
 {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
 }
 
 .first img
 {
     width: 70px;
     height: auto;
-    margin-top: 20px;
-    margin-bottom: 40px;
+    margin-top: 10px;
+    margin-bottom: 30px;
 }
 
 .first span

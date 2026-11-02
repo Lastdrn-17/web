@@ -38,5 +38,151 @@
             <button type="button" class="orange">=</button>
         </div>
     </div>
+
+    <script>
+        const resultDisplay = document.querySelector('.result');
+        const buttons = document.querySelectorAll('.container button');
+
+        let currentInput = '0';
+        let previousInput = '';
+        let operator = '';
+        let shouldResetScreen = false;
+
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+                const buttonText = button.textContent;
+
+                if (!isNaN(buttonText) || buttonText === '0') 
+                {
+                    handleNumber(buttonText);
+                } 
+                else if (buttonText === ',') 
+                {
+                    handleDecimal();
+                } 
+                else if (buttonText === 'AC') 
+                {
+                    clearAll();
+                } 
+                else if (buttonText === '+/-') 
+                {
+                    toggleSign();
+                } 
+                else if (buttonText === '=') 
+                {
+                    calculate();
+                } 
+                else 
+                {
+                    handleOperator(buttonText);
+                }
+
+                resultDisplay.textContent = currentInput.toString().replace('.', ',');
+            });
+        });
+
+        function handleNumber(number) 
+        {
+            if (currentInput === '0' || shouldResetScreen) 
+            {
+                currentInput = number;
+                shouldResetScreen = false;
+            } 
+            else 
+            {
+                currentInput += number;
+            }
+        }
+
+        function handleDecimal() {
+            if (shouldResetScreen) 
+            {
+                currentInput = '0.';
+                shouldResetScreen = false;
+                return;
+            }
+            if (!currentInput.includes('.')) 
+            {
+                currentInput += '.';
+            }
+        }
+
+        function clearAll() 
+        {
+            currentInput = '0';
+            previousInput = '';
+            operator = '';
+            shouldResetScreen = false;
+        }
+
+        function toggleSign() 
+        {
+            currentInput = (parseFloat(currentInput) * -1).toString();
+        }
+
+        function handleOperator(nextOperator) 
+        {
+            const value = parseFloat(currentInput);
+
+            if (nextOperator === '%') 
+            {
+                currentInput = (value / 100).toString();
+                return;
+            }
+
+            if (operator && !shouldResetScreen) 
+            {
+                calculate();
+            }
+
+            previousInput = currentInput;
+            operator = nextOperator;
+            shouldResetScreen = true;
+        }
+
+        function calculate() 
+        {
+            if (operator === '' || shouldResetScreen) return;
+
+            const prev = parseFloat(previousInput);
+            const current = parseFloat(currentInput);
+            let result = 0;
+
+            if (operator === '+') 
+            {
+                result = prev + current;
+            }
+             else if (operator === '-') 
+             {
+                result = prev - current;
+            }
+             else if (operator === 'x')
+            {
+                result = prev * current;
+            } 
+            else if (operator === '÷') 
+            {
+                if (current === 0) 
+                {
+                    result = 'Ошибка';
+                } 
+                else 
+                {
+                    result = prev / current;
+                }
+            }
+
+            if (result !== 'Ошибка' && result.toString().includes('.')) 
+            {
+                result = Math.round(result * 10000000) / 10000000;
+            }
+
+            currentInput = result.toString();
+            operator = '';
+            shouldResetScreen = true;
+        }
+    </script>
+
+
 </body>
 </html>
